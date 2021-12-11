@@ -1,0 +1,268 @@
+*{  margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/* font-family: 'Lato', sans-serif;
+font-family: 'Open Sans Condensed', sans-serif;*/
+.grilla{
+    display: grid;
+    height: 100vh;
+    grid-template-areas: 
+        "header header"
+        "hero hero"
+        "texto video"
+        "footer footer";
+    grid-template-rows: repeat(4,1fr);
+    grid-template-columns: 1fr;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    height: 100vh;
+}
+.list{
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    justify-self: center;
+}
+
+.header{
+    display: flex;
+    grid-area: header;
+    background-color: rgb(205, 180, 219);
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700; 
+    color: rgb(126, 15, 120);
+}
+
+
+.hero{
+    grid-area: hero;
+    background-image: url(../img/pexels-cottonbro-7760809.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items:center;
+    background-repeat: no-repeat;
+    height: 60vh; /*altura de la imagen del hero*/
+    font-size: 1.5rem;
+    padding:1.5rem;
+    color: rgb(26, 66, 7);
+    font-size: 2rem;
+    font-family: 'Open Sans Condensed', sans-serif;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+    background-color: rgb(255, 200, 221);
+}
+.hero__titulo{
+    font-size: 3.5rem;
+    color: rgb(75, 31, 179);
+   
+}
+.main{
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: "texto video";
+    grid-template-rows: repeat(2,1fr);
+    height: 100%;
+    width: 100%;
+}
+.main__secundario{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(255, 175, 204);
+    padding: 1.5rem;
+    width: 100%;
+    gap: 2rem;
+    align-items: center;
+}
+.texto{
+    grid-area: texto;
+    font-size: 1.5rem;
+    width: 100%;
+}
+.video{
+    height: 100%;
+    grid-area: video;
+    display: flex;
+    width: fit-content;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.footer{
+    display: flex;
+    grid-area: footer;
+    background-color: rgb(162, 210, 255);
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700; 
+    color: rgb(13, 82, 75);
+}
+.border{
+    border: 2px dotted pink;
+}
+.btn{
+    border-color: rgb(161, 39, 115);
+    border-radius: 5px;
+    background-color: rgba(189, 224, 254, 0.767);
+    color: rgb(25, 69, 110);
+    padding: 10px 10px;
+    cursor: pointer;
+    flex-wrap: wrap;
+}
+
+.mujer__titulo{
+    color: rebeccapurple;
+    padding: 1rem;
+    background-color: rgb(255, 200, 221);
+}
+.coleccion{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas: "zapatillas tacos botas"
+        "invierno plataformas sandalias";
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    height: 100vh;
+    flex-wrap: wrap;
+    background-color: rgb(255, 200, 221);
+    color:white
+}
+.zapatillas .tacos .botas .invierno .plataformas .sandalias{
+    padding: 0 25px 20px;
+}
+.zapatillas{    
+    grid-area: zapatillas;
+    background-image: url(../img/zapas.jpg);
+}
+.tacos{
+    grid-area:tacos;
+    background-image: url(../img/zapas.jpg);
+}
+.botas{
+    grid-area: botas;
+    background-image: url(../img/zapas.jpg);
+}
+.invierno{
+    grid-area: invierno;
+    background-image: url(../img/zapas.jpg);
+}
+.plataformas{
+    grid-area: plataformas;
+    background-image: url(../img/zapas.jpg);
+}
+.sandalias{
+    grid-area: sandalias;
+    background-image: url(../img/zapas.jpg);
+}
+
+/*grid__nosotros
+coleccion__border
+coleccion__textoUno
+coleccion__textoDos*/
+.grilla--nosotros{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas: "coleccion__textoUno"
+        "coleccion__textoDos" "coleccion__textoTres";
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1rem;
+    gap: 1rem;
+    color: rgb(33, 18, 168);
+}
+
+.coleccion__textoUno{
+    grid-area: coleccion__textoUno;
+}
+
+.coleccion__textoDos{
+    grid-area: coleccion__textoUno;
+}
+
+.coleccion__textoTres{
+    grid-area: coleccion__textoTres;
+}
+
+@media screen and (min-width: 320px; max-width: 599px;) {
+   
+}
+    
+
+@media screen and (max-width: 600px) {
+	.header {
+        display: flex;
+        grid-area: header;
+        background-color: rgb(205, 180, 219);
+        flex-wrap: wrap;
+        align-items: flex-start;
+        flex-direction: column;
+        align-content: space-between;
+    }
+
+    .hero{
+        height: 40%;
+        font-size: 1rem;
+    }
+
+    .mujer__titulo{
+        font-size: 1rem;
+    }
+
+    .main__secundario{
+        flex-wrap: wrap;
+        padding: 0rem;
+    }
+
+    .coleccion {
+        grid-template-areas:
+            "zapatillas"
+            "tacos"
+            "botas"
+            "invierno"
+            "plataformas"
+            "sandalias";
+        font-size: 1rem;
+        flex-wrap: wrap;
+        background-color: rgb(255, 200, 221);
+        color: white;
+        align-content: stretch;
+        align-items: stretch;
+        justify-items: stretch;
+    }
+    .video{
+        flex-wrap: wrap;
+    }
+    .footer{
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1rem;
+        color: rgb(77, 20, 77);
+        padding: 10px 10px;
+    }
+}
+@media  (min-width:601px) {
+    .footer {
+        flex-direction: row;
+        align-items: center;
+    }
+    .header{
+        padding: 1rem;
+        font-size: 1.2rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
