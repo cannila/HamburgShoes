@@ -63,6 +63,7 @@ font-family: 'Open Sans Condensed', sans-serif;*/
 .hero__titulo{
     font-size: 3.5rem;
     color: rgb(75, 31, 179);
+    
 }
 
 .main{
@@ -108,6 +109,7 @@ font-family: 'Open Sans Condensed', sans-serif;*/
 .border{
     border: 2px dotted pink;
 }
+/*btn index, mujeres y kids*/
 .btn{
     border-color: rgb(120, 28, 143);
     border-radius: 5px;
@@ -155,7 +157,6 @@ font-family: 'Open Sans Condensed', sans-serif;*/
     background-image: url(../img/zapas.jpg);
 }
 .tacos{
-    grid-area:tacos;
     background-image: url(../img/zapas.jpg);
 }
 .botas{
@@ -174,6 +175,70 @@ font-family: 'Open Sans Condensed', sans-serif;*/
     grid-area: sandalias;
     background-image: url(../img/zapas.jpg);
 }
+/*btn de hombre*/
+.btnHombre{
+    border-color: rgb(12, 44, 223);
+    border-radius: 5px;
+    background-color: rgba(114, 163, 187, 0.767);
+    color: rgb(5, 27, 41);
+    outline: none;
+    text-align: center;
+    padding: 10px 10px;
+    cursor: pointer;
+    flex-wrap: wrap; /*que pasa si saco esto?*/
+}
+.btnHombre:hover {background-color: rgba(77, 92, 105, 0.767);}
+.btnHombree:active {
+    background-color: rgba(8, 9, 90, 0.767);
+    box-shadow: 0 5 px rgba(53, 46, 119, 0.575);
+    transform: translateY(5px);
+    color: white;
+}
+/*/btn de hombre*/
+
+/*grid de hombre*/
+.hombre__titulo{
+    color: rgb(23, 43, 155);
+    padding: 1rem;
+    background-color: rgb(130, 185, 192);
+}
+.coleccion{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas: "zapatillas zapatos botas"
+        "invierno plataformas sandalias";
+    background-color: rgb(130, 185, 192);
+    color:rgb(226, 221, 221)
+}
+.zapatillas .zapatos .botas .invierno .plataformas .sandalias{
+    padding: 0 25px 20px;
+}
+.zapatillas{    
+    grid-area: zapatillas;
+    background-image: url(../img/zapas.jpg);
+}
+.zapatos{
+    grid-area:zapatos;
+    background-image: url(../img/zapas.jpg);
+}
+.botas{
+    grid-area: botas;
+    background-image: url(../img/zapas.jpg);
+}
+.invierno{
+    grid-area: invierno;
+    background-image: url(../img/zapas.jpg);
+}
+.plataformas{
+    grid-area: plataformas;
+    background-image: url(../img/zapas.jpg);
+}
+.sandalias{
+    grid-area: sandalias;
+    background-image: url(../img/zapas.jpg);
+}
+/*/grid de hombre*/
+
 
 /*grid__nosotros
 coleccion__border
@@ -228,6 +293,9 @@ coleccion__textoDos*/
     .mujer__titulo{
         font-size: 1rem;
     }
+    .hombre__titulo{
+        font-size: 1rem;
+    }
 
     .main__secundario{
         flex-wrap: wrap;
@@ -237,7 +305,7 @@ coleccion__textoDos*/
     .coleccion {
         grid-template-areas:
             "zapatillas"
-            "tacos"
+            "zapatos"
             "botas"
             "invierno"
             "plataformas"
