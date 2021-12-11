@@ -63,8 +63,8 @@ font-family: 'Open Sans Condensed', sans-serif;*/
 .hero__titulo{
     font-size: 3.5rem;
     color: rgb(75, 31, 179);
-   
 }
+
 .main{
     grid-template-columns: repeat(2,1fr);
     grid-template-areas: "texto video";
@@ -109,13 +109,22 @@ font-family: 'Open Sans Condensed', sans-serif;*/
     border: 2px dotted pink;
 }
 .btn{
-    border-color: rgb(161, 39, 115);
+    border-color: rgb(120, 28, 143);
     border-radius: 5px;
     background-color: rgba(189, 224, 254, 0.767);
-    color: rgb(25, 69, 110);
+    color: rgb(168, 44, 168);
+    outline: none;
+    text-align: center;
     padding: 10px 10px;
     cursor: pointer;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /*que pasa si saco esto?*/
+}
+.btn:hover {background-color: rgba(189, 224, 254, 0.767);}
+.btn:active {
+    background-color: rgba(236, 160, 230, 0.767);
+    box-shadow: 0 5 px rgb(97, 87, 187);
+    transform: translateY(5px);
+    color: white;
 }
 
 .mujer__titulo{
